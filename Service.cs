@@ -21,7 +21,7 @@ public class Service : IService
        
 
         Response client = new Response();
-       client.data = hash["name"] + " was here ..."; //concatenate string to input to verify service executed successfully
+       client.data = hash["name"] + " was here ..."; ///concatenates a string verifying the service succesfully executed
      
 
         return client;
