@@ -10,7 +10,7 @@ using Newtonsoft.Json;
 [ServiceContract]
 public interface IService
 {
-
+//attributes for enabling Json requests and responses
  [WebInvoke(Method = "POST", BodyStyle = WebMessageBodyStyle.Bare,  RequestFormat = WebMessageFormat.Json,
         ResponseFormat = WebMessageFormat.Json)]
    
@@ -21,6 +21,8 @@ public interface IService
 	// TODO: Add your service operations here
 }
 
+//data contract for responses and requests
+//define arguments here
 [System.Runtime.Serialization.DataContractAttribute()]
 public class Request
 {
@@ -28,7 +30,7 @@ public class Request
     public string name { get; set; }
    
 }
-
+//define output here
 [System.Runtime.Serialization.DataContractAttribute()]
 public class Response
 {
@@ -36,27 +38,6 @@ public class Response
     public string data { get; set; }
 
 }
-// Use a data contract as illustrated in the sample below to add composite types to service operations.
-/*[DataContract]
-public class CompositeType
-{
-	bool boolValue = true;
-	string stringValue = "Hello ";
 
-	[DataMember]
-	public bool BoolValue
-	{
-		get { return boolValue; }
-		set { boolValue = value; }
-	}
-
-	[DataMember]
-	public string StringValue
-	{
-		get { return stringValue; }
-		set { stringValue = value; }
-	}
-}
-*/
 
 
