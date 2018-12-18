@@ -17,7 +17,7 @@ public class Service : IService
     {
 
         string json = JsonConvert.SerializeObject(rData);//convert to json string
-        var hash = JsonConvert.DeserializeObject<Dictionary<string, string>>(json); //convert to hashmap
+        var hash = JsonConvert.DeserializeObject<Dictionary<string, string>>(json); //convert json string  to hashmap
        
 
         Response client = new Response();
