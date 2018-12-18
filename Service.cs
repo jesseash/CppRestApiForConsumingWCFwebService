@@ -16,12 +16,12 @@ public class Service : IService
     public Response GetData(Request rData)
     {
 
-        string json = JsonConvert.SerializeObject(rData);
-        var hash = JsonConvert.DeserializeObject<Dictionary<string, string>>(json);
+        string json = JsonConvert.SerializeObject(rData);//convert to json string
+        var hash = JsonConvert.DeserializeObject<Dictionary<string, string>>(json); //convert to hashmap
        
 
         Response client = new Response();
-       client.data = hash["name"] + " was here too...";
+       client.data = hash["name"] + " was here ..."; //concatenate string to input to verify service executed successfully
      
 
         return client;
