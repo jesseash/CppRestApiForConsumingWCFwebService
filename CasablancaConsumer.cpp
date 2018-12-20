@@ -1,5 +1,5 @@
 // CasablancaConsumer.cpp : Defines the entry point for the console application.
-//
+////Reference: Marius Bancila's Blog https://mariusbancila.ro/blog/2017/11/19/revisited-full-fledged-client-server-example-with-c-rest-sdk-2-10/
 
 #include "stdafx.h"
 #include <cpprest/http_client.h>
